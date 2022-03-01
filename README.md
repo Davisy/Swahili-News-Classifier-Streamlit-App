@@ -22,4 +22,4 @@ Finally browse the link provided in your browser.
 
 ## HuggingFace Space
 
-The application has been deployed in the huggingface space.You can access here: [https://huggingface.co/spaces/Davis/twitter_scraper](https://huggingface.co/spaces/Davis/twitter_scraper)
+The application has been deployed in the Streamlit Cloud.You can access here: [https://share.streamlit.io/davisy/swahili-news-classifier-streamlit-app/app.py](https://share.streamlit.io/davisy/swahili-news-classifier-streamlit-app/app.py)
