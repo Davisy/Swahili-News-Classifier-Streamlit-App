@@ -15,7 +15,7 @@ Install all streamlit requirements by run the following command
 
 ## Run Streamlit
 
-To access and use the application,donwoload or clone the reposityr and then run the command below.
+To access and use the application,donwoload or clone the repository and then run the command below.
 > streamlit run app.py
 
 Finally browse the link provided in your browser.
