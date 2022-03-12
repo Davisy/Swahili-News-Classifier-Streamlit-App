@@ -41,7 +41,7 @@ if submit:
         )
     else:
 
-        st.write("The news content is not in swahili language.Pleae make sure the input is in swahili language")
+        st.write(" ⚠️ The news content is not in swahili language.Please make sure the input is in swahili language")
 
 
     st.write("Developed with Love by Davis David")
