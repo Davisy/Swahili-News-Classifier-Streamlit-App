@@ -1,5 +1,6 @@
 import streamlit as st
 import requests as r
+from langdetect import detect
 
 
 # add banner image
@@ -20,22 +21,27 @@ submit = my_form.form_submit_button(label="Classify news content")
 if submit:
     # classify news content by using the API URL provided
 
-    keys = {"news": news}
-    prediction = r.get(
-        "https://limitless-forest-00896.herokuapp.com/news-prediction/", params=keys
-    )
+    if detect(news) == "sw":
 
-    # collect and print the result
-    results = prediction.json()
-    category = results["prediction"]
-    probability = results["Probability"]
+        keys = {"news": news}
+        prediction = r.get(
+            "https://limitless-forest-00896.herokuapp.com/news-prediction/", params=keys
+        )
 
-    # Display results of the NLP task
-    st.header("Results")
+        # collect and print the result
+        results = prediction.json()
+        category = results["prediction"]
+        probability = results["Probability"]
 
-    st.write(
-        "News category is {} with a probabiliy of {} ".format(category, probability)
-    )
+        # Display results of the NLP task
+        st.header("Results")
+
+        st.write(
+            "News category is {} with a probabiliy of {} ".format(category, probability)
+        )
+    else:
+
+        st.write("The news content is not in swahili language.Pleae make sure the input is in swahili language")
 
 
-st.write("Developed with Love by Davis David")
+    st.write("Developed with Love by Davis David")
